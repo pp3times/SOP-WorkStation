@@ -57,7 +57,7 @@ public class CustomerController {
     @RequestMapping(value = "/customerDelByname/{name}", method = RequestMethod.DELETE)
     public boolean delCustomerByName(@PathVariable("name") String n){
         for(Customer c:getCustomers()){
-            if(c.getID().equals(n)){
+            if(c.getName().equals(n)){
                 return getCustomers().remove(c);
             }
         }
