@@ -1,9 +1,10 @@
-package com.sop.week5new;
+package com.sop.week5full;
 
 
+import java.io.Serializable;
 import java.util.ArrayList;
 
-public class Sentence {
+public class Sentence implements Serializable {
     public ArrayList<String> badSentences;
     public ArrayList<String> goodSentences;
 

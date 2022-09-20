@@ -1,4 +1,4 @@
-package com.sop.week5new;
+package com.sop.week5full;
 
 import org.springframework.amqp.rabbit.core.RabbitTemplate;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -69,5 +69,10 @@ public class WordPublisher {
             rabbit.convertAndSend("Direct", "bad", s);
 //            System.out.println("Bad");
         }
+    }
+
+    @RequestMapping(value = "/getSentence", method = RequestMethod.GET)
+    public Sentence getSentence() {
+        return (Sentence) (rabbit.convertSendAndReceive("Direct", "get", ""));
     }
 }

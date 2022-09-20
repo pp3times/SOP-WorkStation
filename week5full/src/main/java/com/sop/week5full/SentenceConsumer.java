@@ -1,4 +1,4 @@
-package com.sop.week5new;
+package com.sop.week5full;
 
 
 import org.springframework.amqp.rabbit.annotation.RabbitListener;
@@ -22,5 +22,10 @@ public class SentenceConsumer {
     public void addGoodSentence(String s) {
         this.sentences.goodSentences.add(s);
         System.out.println("In addGoodSentence Method : " + this.sentences.goodSentences);
+    }
+
+    @RabbitListener(queues = "GetQueue")
+    public Sentence getSentence() {
+        return this.sentences;
     }
 }
