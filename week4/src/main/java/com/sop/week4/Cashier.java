@@ -12,7 +12,7 @@ public class Cashier {
         Change change = new Change();
         change.setB1000(n/1000);
         n = n % 1000;
-        change.setB500(n/500);
+        change.setqB500(n/500);
         n = n % 500;
         change.setB100(n/100);
         n = n % 100;
