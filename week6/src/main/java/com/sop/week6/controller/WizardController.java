@@ -2,8 +2,6 @@ package com.sop.week6.controller;
 
 import com.sop.week6.pojo.Wizard;
 import com.sop.week6.repository.WizardService;
-import org.atmosphere.config.service.Get;
-import org.atmosphere.config.service.Post;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
