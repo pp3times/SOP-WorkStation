@@ -16,10 +16,10 @@ public class SentenceConsumer {
         this.sentences.badSentences.add(s);
         System.out.println("In addBadSentence Method : " + this.sentences.badSentences);
     }
-//
-//    @RabbitListener(queues = "GoodWordQueue")
-//    public void addGoodSentence(String s) {
-//        this.sentences.goodSentences.add(s);
-//        System.out.println("In addGoodSentence Method : " + this.sentences.goodSentences);
-//    }
+
+    @RabbitListener(queues = "GoodWordQueue")
+    public void addGoodSentence(String s) {
+        this.sentences.goodSentences.add(s);
+        System.out.println("In addGoodSentence Method : " + this.sentences.goodSentences);
+    }
 }
